@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // ✅ This disables Turbopack and tells Next.js to use Webpack
+  future: {
+    webpack5: true,
+  },
 };
 
 export default nextConfig;
