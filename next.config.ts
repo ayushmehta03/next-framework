@@ -5,6 +5,9 @@ const nextConfig = {
   future: {
     webpack5: true,
   },
+  experimental:{
+    instrumentationHook:true,
+  }
 };
 
 export default withSentryConfig(nextConfig, {
