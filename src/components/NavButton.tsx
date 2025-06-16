@@ -19,7 +19,15 @@ export function NavButton({
       aria-label={label}
       title={label}
       className="rounded-full"
-      asChild />
+      asChild >
+        {href?(
+            <Link href={href}>
+            <Icon />
+            </Link>
+        ): (
+            <Icon />
+        )}
+        </Button>
       
       
     )
