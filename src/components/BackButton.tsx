@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ButtonHTMLAttributes} from "react"
-
     type Props={
         title:string,
         className?:string,

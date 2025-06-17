@@ -1,7 +1,7 @@
 import { getCustomer } from "@/lib/queries/getCustomer";
 import { getTicket } from "@/lib/queries/getTickets";
 import { BackButton } from "@/components/BackButton";
-import { cosineDistance } from "drizzle-orm";
+import * as Sentry from "@sentry/nextjs"
 
 export default async function TicketFormPage({
     searchParams,
@@ -66,6 +66,8 @@ export default async function TicketFormPage({
 
     }catch(e){
     if(e instanceof Error) {
+    Sentry.captureException(e)
+        
         throw e
     }
     }
